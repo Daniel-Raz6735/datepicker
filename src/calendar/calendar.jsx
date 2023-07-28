@@ -51,12 +51,13 @@ export const Calendar = (props) => {
                   const currentDay = moment(states.selectedMonth[props.type].clone()).startOf('day').set("date", day);
                   const dayAfterStartingDay = moment(states.calStartingDate[props.type]).startOf('day').isAfter(currentDay);
                   const isSelectedDate = moment(currentDay).isSame(moment(states.selectedDate[props.type]).startOf('day'))
+                  const isNotAvailableDate = day === null || dayAfterStartingDay || isCalanderDisabled;
   
                   return (
                     <div
                       key={"day" + dayIndex}
-                      className={`day ${day === null || dayAfterStartingDay || isCalanderDisabled ? 'NA' : 'AVAILABLE'} ${isSelectedDate ? "selected": ""}`}
-                      onClick={() => functions.handleDateSelection(moment(states.selectedMonth[props.type].clone()).set("date", day), props.type)}
+                      className={`day ${isNotAvailableDate ? 'NA' : 'AVAILABLE'} ${isSelectedDate ? "selected": ""}`}
+                      onClick={() => isNotAvailableDate ? {} : functions.handleDateSelection(moment(states.selectedMonth[props.type].clone()).set("date", day), props.type)}
                     >
                       {day}
                     </div>

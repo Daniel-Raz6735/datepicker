@@ -1,0 +1,90 @@
+body{
+    direction: rtl;
+}
+
+.datepicker-ui{
+    position: absolute;
+    top: 20px;
+    left: 25%;
+    min-height: 237px;
+    background-color: #ffffff;
+    box-shadow: 0 0 11px 0 rgba(0, 0, 0, 0.19), 0 0 6px 0 rgba(0, 0, 0, 0.26);
+    text-align: right;
+    font-family: "almoni-dl", Arial, serif;
+    color: #636365;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 684px;
+}
+
+.datepicker-ui > .wrap {
+    padding: 37px 32px 16px 32px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.datepicker-ui .cal-agenda {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #636365;
+}
+
+.datepicker-ui .cal-agenda .agenda-item {
+    padding-right: 25px;
+    position: relative;
+    line-height: 14px;
+    margin-top: 5px;
+}
+
+.datepicker-ui .cal-agenda .agenda-item.available:before {
+    background-color: #d8eaea;
+}
+
+.datepicker-ui .cal-agenda .agenda-item:before {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+}
+
+.datepicker-ui .cal-agenda .agenda-item.charter:before {
+    background-color: #ffc7db;
+}
+
+.datepicker-ui > .wrap .btn-close {
+    position: absolute;
+    left: 16px;
+    top: 20px;
+    line-height: 0;
+    cursor: pointer;
+    display: block;
+    color: #404042;
+    opacity: 0.42;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+}
+
+.datepicker-ui > .wrap .btn-close::before {
+    font-size: 26px;
+    content: "\D7";
+    font-weight: normal;
+    font-family: serif;
+    line-height: 0;
+    display: block;
+}
+
+.datepicker-ui .col {
+    float: right;
+    min-height: 1px;
+}

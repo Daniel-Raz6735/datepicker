@@ -42,10 +42,6 @@ const DatePicker = () => {
     <DatePickerContext.Provider
       value={
         {
-          constans: {
-            DAYS_OF_WEEK: DAYS_OF_WEEK,
-            DATE_FORMAT: DATE_FORMAT
-          },
           states: {
             nextXMonth: nextXMonth,
             daysOfMonth: daysOfMonth,

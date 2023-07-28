@@ -7,7 +7,7 @@ export const Dropdown = (props) => {
 
     return (
         <div className="col c-dropdown" onClick={() => functions.setDropdownState(!states.isDropdownOpen[props.type], props.type)}>
-            <div tabIndex="-1" className="dp-dropdown" >
+            <div tabIndex="-1" className={`dp-dropdown ${states.isDropdownOpen[props.type] ? "open" : ""}`} >
                 <div className='wrap'  >
                     <div className="selected">{states.selectedMonth && states.selectedMonth[props.type].format(DATE_FORMAT)}</div>
                     <div className="arrow"></div>
